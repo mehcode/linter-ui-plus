@@ -1,0 +1,47 @@
+@import "ui-variables";
+
+.linter-ui-plus .panel-message {
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: default;
+  -webkit-user-select: none;
+}
+
+.linter-ui-plus .panel-message::before {
+  font-family: 'Linter-UI-Plus';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  font-size: 18px;
+  width: 24px;
+}
+
+.linter-ui-plus .panel-message.severity-error::before {
+  content: "\f026";
+  color: @text-color-error;
+}
+
+.linter-ui-plus .panel-message.severity-warning::before {
+  content: "\f02d";
+  color: @text-color-warning;
+}
+
+.linter-ui-plus .panel-message.severity-info::before {
+  content: "\f059";
+  color: @text-color-info;
+}
+
+.linter-ui-plus .panel-message .position {
+  color: @text-color-subtle;
+  margin-left: 10px;
+}
+
+.linter-ui-plus .panel-message:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}

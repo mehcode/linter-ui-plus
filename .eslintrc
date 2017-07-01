@@ -1,0 +1,52 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "import/core-modules": [
+      "atom"
+    ]
+  },
+  "extends": [
+    "standard",
+    "plugin:flowtype/recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins": [
+    "flowtype",
+    "react"
+  ],
+  "rules": {},
+  "globals": {
+    "atom": true,
+    "advanceClock": true,
+    "assert": true,
+    "HTMLElement": true,
+    "MouseEvent": true,
+    "IDBKeyRange": true,
+    "before": true,
+    "beforeEach": true,
+    "after": true,
+    "afterEach": true,
+    "describe": true,
+    "fdescribe": true,
+    "xdescribe": true,
+    "it": true,
+    "xit": true,
+    "stress": true,
+    "waitsForPromise": true,
+    "oneTick": true,
+    "until": true,
+    "runs": true,
+    "openAndActivated": true,
+    "jasmine": true,
+    "expect": true,
+    "spyOn": true,
+    "waitsFor": true,
+    "sinon": true
+  }
+}
