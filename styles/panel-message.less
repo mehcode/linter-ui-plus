@@ -1,16 +1,16 @@
 @import "ui-variables";
 
 .linter-ui-plus .panel-message {
-  display: flex;
   align-items: center;
   padding-left: 35px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  // padding-top: 5px;
+  // padding-bottom: 5px;
+  height: 30px;
   cursor: default;
   -webkit-user-select: none;
 }
 
-.linter-ui-plus .panel-message::before {
+.linter-ui-plus .panel-message .excerpt::before {
   font-family: 'Linter-UI-Plus';
   font-weight: normal;
   font-style: normal;
@@ -19,27 +19,50 @@
   -webkit-font-smoothing: antialiased;
   text-decoration: none;
   font-size: 18px;
-  width: 24px;
+  top: 2px;
+  position: relative;
+  width: 25px;
 }
 
-.linter-ui-plus .panel-message.severity-error::before {
+.linter-ui-plus .panel-message.severity-error .excerpt::before {
   content: "\f026";
   color: @text-color-error;
 }
 
-.linter-ui-plus .panel-message.severity-warning::before {
+.linter-ui-plus .panel-message.severity-warning .excerpt::before {
   content: "\f02d";
   color: @text-color-warning;
 }
 
-.linter-ui-plus .panel-message.severity-info::before {
+.linter-ui-plus .panel-message.severity-info .excerpt::before {
   content: "\f059";
   color: @text-color-info;
 }
 
-.linter-ui-plus .panel-message .position {
+.linter-ui-plus .panel-message .position-row {
   color: @text-color-subtle;
-  margin-left: 10px;
+  text-align: right;
+  // TODO: The sizes of the positions will need to be determined by
+  //       the highest row/line count in the section
+  width: 25px;
+
+  &::before {
+    width: 35px;
+    display: block;
+    content: " ";
+  }
+}
+
+.linter-ui-plus .panel-message .position-separator {
+  color: @text-color-subtle;
+  text-align: center;
+  width: 6px;
+}
+
+.linter-ui-plus .panel-message .position-column {
+  color: @text-color-subtle;
+  text-align: left;
+  width: 25px;
 }
 
 .linter-ui-plus .panel-message:hover {

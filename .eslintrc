@@ -13,12 +13,10 @@
   },
   "extends": [
     "standard",
-    "plugin:flowtype/recommended",
-    "plugin:react/recommended"
+    "plugin:flowtype/recommended"
   ],
   "plugins": [
-    "flowtype",
-    "react"
+    "flowtype"
   ],
   "rules": {},
   "globals": {
