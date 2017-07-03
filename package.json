@@ -40,7 +40,7 @@
     "babel-plugin-transform-es2015-parameters": "^6.21.0",
     "babel-plugin-transform-object-rest-spread": "^6.20.2",
     "classnames": "^2.2.5",
-    "etch": "^0.12.4",
+    "etch": "^0.12.5",
     "event-kit": "^2.3.0",
     "lodash": "^4.17.4"
   },
