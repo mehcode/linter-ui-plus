@@ -1,0 +1,2 @@
+'.linter-ui-plus.panel':
+  'enter': 'linter-ui-plus:open-selected-entry'
