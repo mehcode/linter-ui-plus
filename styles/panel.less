@@ -1,3 +1,35 @@
+@import "ui-variables";
+
 .linter-ui-plus.panel {
   overflow-y: auto;
+}
+
+.linter-ui-plus .panel-row {
+  align-items: center;
+  padding-left: 12px;
+  height: 32px;
+  cursor: default;
+  position: relative;
+  -webkit-user-select: none;
+}
+
+.linter-ui-plus .panel-row::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  height: 32px;
+  width: 3px;
+}
+
+.linter-ui-plus .panel-row:hover {
+  background-color: darken(@background-color-highlight, 5%);
+}
+
+.linter-ui-plus .panel-row.panel-row-selected {
+  background-color: @background-color-highlight;
+  color: @text-color-highlight;
+}
+
+.linter-ui-plus.panel-focus .panel-row.panel-row-selected::after {
+  background-color: @ui-site-color-1;
 }
