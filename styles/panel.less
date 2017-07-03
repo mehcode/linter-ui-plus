@@ -7,7 +7,7 @@
 .linter-ui-plus .panel-row {
   align-items: center;
   padding-left: 12px;
-  height: 32px;
+  height: 30px;
   cursor: default;
   position: relative;
   -webkit-user-select: none;
@@ -17,7 +17,7 @@
   content: " ";
   position: absolute;
   left: 0;
-  height: 32px;
+  height: 30px;
   width: 3px;
 }
 
@@ -32,4 +32,34 @@
 
 .linter-ui-plus.panel-focus .panel-row.panel-row-selected::after {
   background-color: @ui-site-color-1;
+}
+
+.linter-ui-plus.panel .btn-toolbar {
+  padding: 7px;
+  display: flex;
+  align-items: center;
+
+  > * {
+    float: none;
+  }
+
+  > .btn, .btn-group {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  .btn-group {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .input-search {
+    width: 400px;
+    flex-shrink: 1;
+  }
 }
