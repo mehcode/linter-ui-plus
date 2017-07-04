@@ -18,7 +18,9 @@
   "plugins": [
     "flowtype"
   ],
-  "rules": {},
+  "rules": {
+    "no-unused-vars": 1
+  },
   "globals": {
     "atom": true,
     "advanceClock": true,
