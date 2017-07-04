@@ -41,9 +41,13 @@
 }
 
 .linter-ui-plus.panel .btn-toolbar {
-  padding: 7px 9px;
+  padding: 5px 7px;
   display: flex;
   align-items: center;
+
+  background: @tool-panel-background-color;
+  border-top: 1px solid @pane-item-border-color;
+  border-bottom: 1px solid @pane-item-border-color;
 
   > * {
     float: none;
@@ -64,8 +68,8 @@
     flex: 1;
   }
 
-  .input-search {
-    width: 400px;
+  atom-text-editor {
+    flex: 1.5;
     flex-shrink: 1;
   }
 }
