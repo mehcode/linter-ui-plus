@@ -1,4 +1,4 @@
-'.linter-ui-plus.panel .main':
+'.linter-ui-plus.panel':
   'enter': 'linter-ui-plus:open-selected-entry'
 
 '.platform-darwin, .platform-linux, .platform-win32':

@@ -1,4 +1,5 @@
 @import "ui-variables";
+@import "variables";
 
 .linter-ui-plus.panel {
   display: flex;
@@ -10,21 +11,23 @@
   flex: 1;
 }
 
+.linter-ui-plus.panel .main > table {
+  width: 100%;
+}
+
 .linter-ui-plus .panel-row {
   align-items: center;
   padding-left: 12px;
-  height: 30px;
+  height: @linter-ui-plus-panel-row-height;
   cursor: default;
-  position: relative;
   -webkit-user-select: none;
+  width: 100%;
 }
 
-.linter-ui-plus .panel-row::before {
-  content: " ";
-  position: absolute;
-  left: 0;
-  height: 30px;
-  width: 3px;
+.linter-ui-plus .panel-row .marker-focus {
+  min-width: 2px;
+  max-width: 2px;
+  width: 2px;
 }
 
 .linter-ui-plus .panel-row:hover {
@@ -36,7 +39,7 @@
   color: @text-color-highlight;
 }
 
-.linter-ui-plus.panel-focus .panel-row.panel-row-selected::before {
+.linter-ui-plus.panel-focus .panel-row.panel-row-selected .marker-focus {
   background-color: @ui-site-color-1;
 }
 

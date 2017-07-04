@@ -1,49 +1,35 @@
 @import "ui-variables";
+@import "variables";
 
 .linter-ui-plus .panel-message {
   padding-left: 35px;
 }
 
-.linter-ui-plus .panel-message .excerpt {
+.linter-ui-plus .panel-message .severity {
   display: flex;
   align-items: center;
-  height: inherit;
-  position: relative;
+  height: @linter-ui-plus-panel-row-height;
+  width: 24px;
+
+  &.luip-icon-error::before {
+    color: @text-color-error;
+  }
+  &.luip-icon-warning::before {
+    color: @text-color-warning;
+  }
+  &.luip-icon-info::before {
+    color: @text-color-info;
+  }
 }
 
-.linter-ui-plus .panel-message .excerpt::before {
-  font-family: 'Linter-UI-Plus';
-  font-weight: normal;
-  font-style: normal;
-  display: inline-block;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  text-decoration: none;
-  font-size: 18px;
-  // top: 2px;
-  position: relative;
-  width: 25px;
-}
-
-.linter-ui-plus .panel-message.severity-error .excerpt::before {
-  content: "\f026";
-  color: @text-color-error;
-}
-
-.linter-ui-plus .panel-message.severity-warning .excerpt::before {
-  content: "\f02d";
-  color: @text-color-warning;
-}
-
-.linter-ui-plus .panel-message.severity-info .excerpt::before {
-  content: "\f059";
-  color: @text-color-info;
+.linter-ui-plus .panel-message .excerpt {
+  width: 100%;
 }
 
 .linter-ui-plus .panel-message .position-row {
   color: @text-color-subtle;
   text-align: right;
-  width: 1%;
+  width: 1px;
   padding-left: 25px;
   min-width: 40px;
 }
@@ -57,16 +43,14 @@
 .linter-ui-plus .panel-message .position-column {
   color: @text-color-subtle;
   text-align: left;
-  width: 1%;
-  padding-right: 10px;
+  width: 1px;
+  padding-right: 8px;
 }
 
 .linter-ui-plus .panel-message .provider {
-  // margin-left: 35px;
   margin-left: 4px;
   margin-right: 10px;
   color: @text-color-subtle;
-  // background: @background-color-highlight;
   background: rgba(255, 255, 255, 0.05);
   border-radius: @component-border-radius;
   padding: 2px 4px;
