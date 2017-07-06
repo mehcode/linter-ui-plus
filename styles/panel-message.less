@@ -1,15 +1,12 @@
 @import "ui-variables";
-@import "variables";
-
-.linter-ui-plus .panel-message {
-  padding-left: 35px;
-}
 
 .linter-ui-plus .panel-message .severity {
-  display: flex;
-  align-items: center;
-  height: @linter-ui-plus-panel-row-height;
-  width: 24px;
+  padding-right: 3px;
+
+  &::before {
+    position: relative;
+    top: 1px;
+  }
 
   &.luip-icon-error::before {
     color: @text-color-error;
@@ -22,15 +19,11 @@
   }
 }
 
-.linter-ui-plus .panel-message .excerpt {
-  width: 100%;
-}
-
 .linter-ui-plus .panel-message .position-row {
   color: @text-color-subtle;
   text-align: right;
   width: 1px;
-  padding-left: 25px;
+  padding-left: 15px;
   min-width: 40px;
 }
 
@@ -44,16 +37,23 @@
   color: @text-color-subtle;
   text-align: left;
   width: 1px;
-  padding-right: 8px;
+  padding-right: 5px;
+}
+
+.linter-ui-plus .panel-message .provider-cell {
+  white-space: nowrap;
+  padding-left: 2px;
+  padding-right: 6px;
 }
 
 .linter-ui-plus .panel-message .provider {
-  margin-left: 4px;
-  margin-right: 10px;
   color: @text-color-subtle;
   background: rgba(255, 255, 255, 0.05);
   border-radius: @component-border-radius;
   padding: 2px 4px;
   font-size: @font-size;
-  align-self: center;
+}
+
+.linter-ui-plus .panel-message .excerpt {
+  width: 100%;
 }

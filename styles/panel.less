@@ -1,5 +1,4 @@
 @import "ui-variables";
-@import "variables";
 
 .linter-ui-plus.panel {
   display: flex;
@@ -17,11 +16,14 @@
 
 .linter-ui-plus .panel-row {
   align-items: center;
-  padding-left: 12px;
-  height: @linter-ui-plus-panel-row-height;
   cursor: default;
   -webkit-user-select: none;
   width: 100%;
+  > * {
+    vertical-align: middle;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
 }
 
 .linter-ui-plus .panel-row .marker-focus {
