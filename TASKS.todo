@@ -1,0 +1,15 @@
+[x] When showing the panel, focus the active editor (if one) in the panel
+[x] Fold / Unfold
+[ ] Move Next / Move Previous
+[ ] Basic Search
+[ ] Fix #1
+[x] Fix scrolling (toolbar should stick)
+[x] Change arrows to up / down
+[x] Use marker cell instead of ::before
+[x] Use 1 table instead of N tables (1-per-panel instead of 1-per-section)
+
+[ ] Command: Move Next
+[ ] Command: Move Previous
+[ ] Buffer Decorations
+[ ] Marker Decorations
+[ ] Optimize loading speed

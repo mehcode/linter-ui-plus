@@ -1,5 +1,6 @@
 // We are importing a custom icon font from icomoon because we need
 // a few icons that are just not in octoicons
+@import "ui-variables";
 
 @font-face {
   font-family: 'Linter-UI-Plus';
@@ -17,17 +18,20 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   text-decoration: none;
-  font-size: 18px;
+  text-rendering: optimizeLegibility;
 }
 
 .luip-icon-error::before {
   content: "\f026";
+  color: @text-color-error;
 }
 
 .luip-icon-warning::before {
   content: "\f02d";
+  color: @text-color-warning;
 }
 
 .luip-icon-info::before {
   content: "\f059";
+  color: @text-color-info;
 }

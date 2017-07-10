@@ -1,7 +1,28 @@
+/* @flow */
+
 declare var atom: any
 
 declare module 'atom' {
-  declare var TextEditor: any;
-  declare var Point: any;
-  declare var Range: any;
+  declare type TextEditor = any;
+
+  declare type Point = {
+    row: number,
+    column: number,
+  };
+
+  declare type Range = {
+    start: Point,
+    end: Point,
+  };
+
+  declare type BufferMarker = {
+    previousEventState: {
+      range: Range
+    }
+  }
+
+  declare type DisplayMarker = {
+    bufferMarker: BufferMarker,
+    destroy(): void
+  };
 }

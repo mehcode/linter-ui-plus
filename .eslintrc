@@ -1,6 +1,5 @@
 {
   "root": true,
-  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -16,10 +15,12 @@
     "plugin:flowtype/recommended"
   ],
   "plugins": [
-    "flowtype"
+    "flowtype",
+    "react"
   ],
   "rules": {
-    "no-unused-vars": 1
+    "no-unused-vars": 1,
+    "react/jsx-uses-vars": 1
   },
   "globals": {
     "atom": true,

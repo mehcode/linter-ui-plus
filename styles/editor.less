@@ -1,0 +1,59 @@
+// @import "ui-variables";
+@import "syntax-variables";
+
+@gutter-width: 1.5em;
+
+atom-text-editor .gutter[gutter-name='linter-ui-plus'] {
+  width: @gutter-width;
+  -webkit-font-smoothing: antialiased;
+
+  .linter-gutter-marker {
+    width: @gutter-width;
+    background: @syntax-gutter-background-color;
+    text-align: center;
+  }
+}
+
+// TODO: Look at replacing with `text-decoration: underline wavy @color` when possible
+
+.wavy-underline(@color) {
+  background-image:
+    linear-gradient(45deg, transparent 65%, @color 80%, @color 90%, transparent 90%),
+    linear-gradient(135deg, transparent 5%, @color 15%, @color 25%, transparent 25%),
+    linear-gradient(135deg, transparent 45%, @color 55%, @color 65%, transparent 65%),
+    linear-gradient(45deg, transparent 25%, @color 35%, @color 50%, transparent 50%);
+  background-size: 8px 2px;
+  // background-size: 0.5714285714285714em 0.14285714285714285em;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+}
+
+atom-text-editor .highlights *[class*="linter-highlight"].region {
+  border: 1px solid transparent;
+  position: absolute;
+  z-index: 1;
+  border-radius: @component-border-radius;
+
+  &.linter-highlight-error {
+    .wavy-underline(@text-color-error);
+  }
+
+  &.linter-highlight-warning {
+    .wavy-underline(@text-color-warning);
+  }
+
+  &.linter-highlight-info {
+    .wavy-underline(@text-color-info);
+  }
+}
+
+// TODO: Requires onlyHead support for marker layers & gutters
+// atom-text-editor .gutter[gutter-name='linter-ui-plus'] .cursor-line {
+//   width: @gutter-width;
+//   background: @syntax-gutter-background-color-selected;
+// }
+//
+// atom-text-editor .gutter[gutter-name='linter-ui-plus'] .cursor-line-no-selection {
+//   width: @gutter-width;
+//   background: @syntax-gutter-background-color;
+// }
