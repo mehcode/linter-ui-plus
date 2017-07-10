@@ -5,6 +5,8 @@ import type { TextEditor, Point, Range } from 'atom'
 declare module '@atom/linter' {
   declare type Severity = 'error' | 'warning' | 'info'
 
+  declare type LinterMessageDescription = string | (() => Promise<string> | string)
+
   declare type Message = {
     // Automatically added by linter
     key: string,
@@ -37,7 +39,7 @@ declare module '@atom/linter' {
         position: Range,
         apply: () => any
       }>,
-    description?: string | (() => Promise<string> | string)
+    description?: LinterMessageDescription
   }
 
   declare type MessageLegacy = {
