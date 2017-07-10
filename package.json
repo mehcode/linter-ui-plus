@@ -1,7 +1,7 @@
 {
   "name": "linter-ui-plus",
   "main": "./lib/index.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An experiment into an enhanced UI for the Atom Linter package.",
   "keywords": [
     "linter-ui"
