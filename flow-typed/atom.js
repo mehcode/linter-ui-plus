@@ -4,6 +4,7 @@ declare var atom: any
 
 declare module 'atom' {
   declare type TextEditor = any;
+  declare type TextBuffer = any;
 
   declare type Point = {
     row: number,
