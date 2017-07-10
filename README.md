@@ -1,5 +1,5 @@
 # Linter-UI-Plus
-> An expirement into an enhanced UI for the Atom Linter package.
+> An experiment into an enhanced UI for the Atom Linter package.
 
 #### This is an _alpha_ release. Not all features are available (yet) that are in `linter-ui-default`.
 
