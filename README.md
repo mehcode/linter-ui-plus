@@ -1,7 +1,7 @@
 # Linter-UI-Plus
 > An experiment into an enhanced UI for the Atom Linter package.
 
-#### This is an _alpha_ release. Not all features are available (yet) that are in `linter-ui-default` and those that are present are subject to change. Feel free to open issues for any missing features as they may be missing for a reason.
+#### This is an _alpha_ release. Not all features are available (yet) that are in `linter-ui-default` and those that are present are subject to change. Please open issues with any feedback you have.
 
 ## Panel
 
