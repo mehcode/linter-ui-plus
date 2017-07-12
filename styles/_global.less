@@ -10,28 +10,36 @@
   font-style: normal;
 }
 
-.luip-icon::before {
-  font-family: 'Linter-UI-Plus';
-  font-weight: normal;
-  font-style: normal;
-  display: inline-block;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  text-decoration: none;
-  text-rendering: optimizeLegibility;
+.luip-icon {
+  &::before {
+    font-family: 'Linter-UI-Plus';
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+  }
 }
 
-.luip-icon-error::before {
-  content: "\f026";
-  color: @text-color-error;
+.luip-icon-error {
+  &::before {
+    content: "\f026";
+    color: @text-color-error;
+  }
 }
 
-.luip-icon-warning::before {
-  content: "\f02d";
-  color: @text-color-warning;
+.luip-icon-warning {
+  &::before {
+    content: "\f02d";
+    color: @text-color-warning;
+  }
 }
 
-.luip-icon-info::before {
-  content: "\f059";
-  color: @text-color-info;
+.luip-icon-info {
+  &::before {
+    content: "\f059";
+    color: @text-color-info;
+  }
 }

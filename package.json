@@ -73,5 +73,23 @@
   "package-deps": [
     "linter"
   ],
-  "configSchema": {}
+  "configSchema": {
+    "showInStatusBar": {
+      "description": "Show a summary in the current project.",
+      "type": "boolean",
+      "default": true,
+      "order": 1
+    },
+    "statusBarPosition": {
+      "title": "Position in Status Bar",
+      "description": "Show the summary (if enabled) on the left or right of the status bar.",
+      "type": "string",
+      "enum": [
+        "Left",
+        "Right"
+      ],
+      "default": "Left",
+      "order": 2
+    }
+  }
 }

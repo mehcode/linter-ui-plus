@@ -1,0 +1,45 @@
+@import "./_global";
+
+.linter-ui-plus.status-bar {
+}
+
+.linter-ui-plus.status-bar .tile-error {
+  .luip-icon;
+  .luip-icon-error;
+
+  color: @text-color-error;
+}
+
+.linter-ui-plus.status-bar .tile-warning {
+  .luip-icon;
+  .luip-icon-warning;
+
+  color: @text-color-warning;
+}
+
+.linter-ui-plus.status-bar .tile-info {
+  .luip-icon;
+  .luip-icon-info;
+
+  color: @text-color-info;
+}
+
+.linter-ui-plus.status-bar .tile {
+  &::before {
+    font-size: 1.3em;
+    vertical-align: middle;
+    position: relative;
+    top: -0.05em;
+    margin-right: 0.15em;
+    color: inherit;
+  }
+
+  & + .tile {
+    margin-left: 0.4em;
+  }
+}
+
+.linter-ui-plus.status-bar .tile[data-count="0"] {
+  color: inherit;
+  opacity: 0.3;
+}
