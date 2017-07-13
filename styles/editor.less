@@ -1,5 +1,4 @@
-// @import "ui-variables";
-@import "syntax-variables";
+@import "ui-variables";
 
 @gutter-width: 1.5em;
 
@@ -9,7 +8,6 @@ atom-text-editor .gutter[gutter-name='linter-ui-plus'] {
 
   .linter-gutter-marker {
     width: @gutter-width;
-    background: @syntax-gutter-background-color;
     text-align: center;
   }
 }
@@ -23,7 +21,6 @@ atom-text-editor .gutter[gutter-name='linter-ui-plus'] {
     linear-gradient(135deg, transparent 45%, @color 55%, @color 65%, transparent 65%),
     linear-gradient(45deg, transparent 25%, @color 35%, @color 50%, transparent 50%);
   background-size: 8px 2px;
-  // background-size: 0.5714285714285714em 0.14285714285714285em;
   background-repeat: repeat-x;
   background-position: left bottom;
 }
@@ -47,13 +44,14 @@ atom-text-editor .highlights *[class*="linter-highlight"].region {
   }
 }
 
-// TODO: Requires onlyHead support for marker layers & gutters
-// atom-text-editor .gutter[gutter-name='linter-ui-plus'] .cursor-line {
-//   width: @gutter-width;
-//   background: @syntax-gutter-background-color-selected;
-// }
-//
-// atom-text-editor .gutter[gutter-name='linter-ui-plus'] .cursor-line-no-selection {
-//   width: @gutter-width;
-//   background: @syntax-gutter-background-color;
-// }
+atom-text-editor .gutter[gutter-name='linter-ui-plus'] .cursor-line {
+  width: @gutter-width;
+}
+
+atom-text-editor .gutter[gutter-name='linter-ui-plus'] .cursor-line-no-selection {
+  width: @gutter-width;
+
+  & + .cursor-line {
+    display: none;
+  }
+}
