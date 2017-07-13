@@ -43,6 +43,7 @@
     "classnames": "^2.2.5",
     "etch": "^0.12.5",
     "import-lazy": "^3.0.0",
+    "lazy-cache": "^2.0.2",
     "marked": "^0.3.6"
   },
   "devDependencies": {
